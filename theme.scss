@@ -477,6 +477,7 @@ strong a {
 	}
 	> .container {
 		padding: 0;
+		width: 100%;
 		> nav {
 			border: none;
 			box-shadow: none;
@@ -518,7 +519,7 @@ strong a {
 			height: 70px;
 			margin-top: 10px;
 			@media(min-width:992px){
-				height: 100px;
+			    height: 130px;
 			}	
 		}
 	}
@@ -569,10 +570,12 @@ strong a {
 	@media(min-width:992px){
 		float:left;
 		width: auto;
+		margin:auto;
 	}
 	@media(min-width:1200px){
 		float:right;
 		width: auto;
+		margin: auto;
 	}
 	ul{
 		@include transition(all 0.2s ease);
@@ -825,11 +828,11 @@ strong a {
 		padding: 30px;
 		@include transform(translate(-50%,-50%));
 		@media(min-width:768px){
-			width: 700px;
+		    width: 100%;
 			padding: 0;
 		}
 		@media(min-width:991px){
-			width: 980px;
+		    width: 100%;
 		}
 		h1{
 			font-size: 20px;
@@ -885,15 +888,31 @@ strong a {
 /* --------------------------------------------------------------------------------------------- */
 
 .text-field{
-@media(min-width:768px){
-	padding: 5% 5%;
+	padding: 0px;
+	@media(min-width:768px){
+		
 		h1{
 			font-size: 40px;
-			padding-bottom:20px;
 		}
 	}
 }
 
+@media (min-width: 768px)
+.start-section .text-field .image {
+    min-height: 50vh;
+}
+
+.start-section .text-field .text {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-section .text-field .text .innerinner {
+    max-width: 800px;
+    width: 100%;
+}
 .startpage-img{
 	@media(min-width:768px){
 	padding: 20px 20px;
@@ -921,7 +940,8 @@ strong a {
 	padding: 50px 0 0 0;
 	background-color: $footer-color;
 	@media(min-width:768px){
-		padding: 80px 0;		
+		padding: 10px 0;
+		text-align: center;
 	}
 	.col-sm-3, .col-sm-4, .col-sm-6 {
 		margin-bottom: 50px;
@@ -944,6 +964,8 @@ strong a {
 	}
 	ul li {
 		line-height: 1.8;
+		display: inline-block;
+    	margin: 5px 20px;
 	}
 	h4 {
 		margin-bottom: 20px;
@@ -1373,6 +1395,7 @@ pagination > .active > a, .pagination > .active > span, .pagination > .active > 
 	img {
 		margin-bottom: 30px;
 		overflow: hidden;
+		min-height: 152px;
 		@include transition(all 0.5s ease);
 		&:hover {
 			opacity: 1;
