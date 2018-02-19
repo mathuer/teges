@@ -247,6 +247,32 @@ strong a {
     }
 }
 
+.form button {
+	background-color: $primary-color;
+	background-image: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+    margin: 2px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border: none;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-shadow: none;
+    @include border-radius(3px);
+    @include transition(all 0.5s ease);
+    &:hover {
+	    background: darken( $primary-color, 10% );
+	    color: #fff;
+    }
+}
+
+
 /* --------------------------------------------------------------------------------------------- */
 /* Margin and padding */
 /* --------------------------------------------------------------------------------------------- */
@@ -621,7 +647,7 @@ strong a {
 				letter-spacing: 2px;
 				line-height: 60px;
 				@media(min-width:992px){
-					padding:0px 12px;
+					padding:0px 7px;
 					height: auto;
 					color: #fff;
 					max-width: 100%;
@@ -895,6 +921,10 @@ strong a {
 			font-size: 40px;
 		}
 	}
+	img{
+		text-align: center;
+		margin: auto;
+	}
 }
 
 @media (min-width: 768px)
@@ -907,6 +937,12 @@ strong a {
     display: flex;
     align-items: center;
     justify-content: center;
+	@media(min-width:992px){
+	 min-height: 40vh;
+	}
+		@media(min-width:1200px){
+	 min-height: 50vh;
+	}
 }
 
 .start-section .text-field .text .innerinner {
@@ -919,6 +955,8 @@ strong a {
 
 	}
 }
+
+
 /* --------------------------------------------------------------------------------------------- */
 /* Referenser*/
 /* --------------------------------------------------------------------------------------------- */
